@@ -7,5 +7,5 @@ run_confd()
 
 # Copy the running script
 mv /tmp/start_consul.sh /opt/rancher/bin
-
+sed -i 's|/service/consul|/service/${sn:=consul}|g' /etc/confd/conf.d/*
 run_confd
