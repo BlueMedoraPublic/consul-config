@@ -3,6 +3,8 @@
     "retry_join": [{{ $containerName := getv "/self/service/containers/0"}}"{{getv (printf "/containers/%s/primary_ip" $containerName)}}"],
     "bootstrap": false,{{end}}
     "server": true,
+    "raft_protocol": 3,
+    "cleanup_dead_servers": true,
     "datacenter": "{{getv "/self/service/metadata/dc"}}",
     "advertise_addr": "{{getv "/self/container/primary_ip"}}",
     "bind_addr": "{{getv "/self/container/primary_ip"}}",
@@ -21,5 +23,8 @@
     "acl_master_token": "{{getv "/self/service/metadata/acl.master_token"}}",
     {{ end }}
     "ui": {{getv "/self/service/metadata/ui.enabled"}},
-    "log_level": "INFO"
+    "log_level": "INFO",
+    "performance": {
+      "raft_multiplier": 1
+    }
 }
