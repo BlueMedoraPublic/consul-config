@@ -17,7 +17,7 @@
     "verify_incoming": true,
     "verify_outgoing": true,
     {{ if (eq (getv "/self/service/metadata/acl.enabled") "true") }}
-    "acl_datacenter": "{{getv "/self/service/metadata/dc"}}",
+    "acl_datacenter": "{{getv "/self/service/metadata/dc.name"}}",
     "acl_default_policy": "{{getv "/self/service/metadata/acl.default_policy"}}",
     "acl_down_policy": "{{getv "/self/service/metadata/acl.down_policy"}}",
     "acl_master_token": "{{getv "/self/service/metadata/acl.master_token"}}",
