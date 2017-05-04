@@ -14,7 +14,7 @@ keys = [
   "/self/service/metadata/acl.down_policy",
   "/self/service/metadata/acl.master_token",
   "/self/service/metadata/ui.enabled",
-  "/self/service/metadata/dc",
+  "/self/service/metadata/dc.name",
   "/self/service/metadata/sn",
   "/self/container/service_index",
 ]
