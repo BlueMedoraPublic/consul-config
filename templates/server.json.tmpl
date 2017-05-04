@@ -4,7 +4,6 @@
     "bootstrap": false,{{end}}
     "server": true,
     "raft_protocol": 3,
-    "cleanup_dead_servers": true,
     "datacenter": "{{getv "/self/service/metadata/dc.name"}}",
     "advertise_addr": "{{getv "/self/container/primary_ip"}}",
     "bind_addr": "{{getv "/self/container/primary_ip"}}",
